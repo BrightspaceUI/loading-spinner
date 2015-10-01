@@ -31,7 +31,7 @@ class Component extends React.Component {
 
 This repository is configured with EditorConfig rules and contributions should make use of them. See the VUI Best Practices & Style Guide for more information.
 
-[npm-url]: https://npmjs.org/package/react-lvalence-ui-loading-spinner
-[npm-image]: https://badge.fury.io/js/react-lvalence-ui-loading-spinner.png
-[ci-url]: https://travis-ci.org/Brightspace/react-lvalence-ui-loading-spinner
-[ci-image]: https://travis-ci.org/Brightspace/react-lvalence-ui-loading-spinner.svg
+[npm-url]: https://npmjs.org/package/react-valence-ui-loading-spinner
+[npm-image]: https://badge.fury.io/js/react-valence-ui-loading-spinner.png
+[ci-url]: https://travis-ci.org/Brightspace/react-valence-ui-loading-spinner
+[ci-image]: https://travis-ci.org/Brightspace/react-valence-ui-loading-spinner.svg
