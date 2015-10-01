@@ -1,7 +1,6 @@
 # React Loading Spinner
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
-[![Coverage Status](https://coveralls.io/repos/Brightspace/react-valence-ui-loading-spinner/badge.svg?branch=master&service=github)](https://coveralls.io/github/Brightspace/react-valence-ui-loading-spinner?branch=master)
 
 A loading spinner written in React. 
 

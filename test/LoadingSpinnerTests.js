@@ -1,6 +1,6 @@
 'user strict';
 
-jest.dontMock( '../src/LoadingSpinner.jsx' );
+jest.dontMock( '../lib/LoadingSpinner' );
 
 describe( 'LoadingSpinner', function() {
 
@@ -10,7 +10,7 @@ describe( 'LoadingSpinner', function() {
 
 	beforeEach( function() {
 		React = require( 'react/addons' );
-		LoadingSpinner = require( '../src/LoadingSpinner.jsx' );
+		LoadingSpinner = require( '../lib/index' );
 		TestUtils = React.addons.TestUtils;
 	});
 

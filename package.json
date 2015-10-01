@@ -10,8 +10,7 @@
     "build-sample": "node-sass ./sample/app.scss ./sample/dist/app.css && browserify -s app ./sample/app.js > ./sample/dist/app.js",
     "serve": "http-server -p 8080 ./sample/",
     "clean-node-modules": "rimraf node_modules",
-    "test": "npm run build && jest --coverage",
-    "report-coverage": "coveralls < ./coverage/lcov.info"
+    "test": "npm run build && jest"
   },
   "repository": {
     "type": "git",
@@ -39,6 +38,7 @@
     "http-server": "^0.8.5",
     "jest-cli": "^0.5.8",
     "node-sass": "^3.3.3",
+    "react-tools": "^0.13.3",
     "rimraf": "^2.4.3"
   },
   "browserify": {
