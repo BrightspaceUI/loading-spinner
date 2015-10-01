@@ -23,7 +23,11 @@ npm install react-loading-spinner
 import LoadingSpinner from 'react-loading-spinner';
 class Component extends React.Component {
     render() {
-        return <LoadingSpinner className='myCssClass' size='10px' thickness='10px' colour='#ccc'/>
+        return <LoadingSpinner 
+        			className='myCssClass' 
+        			size='10px' 
+        			thickness='10px' 
+        			colour='#ccc'/>
     }
 }
 ```
