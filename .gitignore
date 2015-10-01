@@ -1,0 +1,13 @@
+# Logs
+logs
+*.log
+
+# Dependency directory
+node_modules
+
+#distributed files
+lib
+
+# Test Coverage
+coverage
+
