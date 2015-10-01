@@ -12,6 +12,7 @@
     ".npmignore",
     ".travis.yml",
     "package.json",
-    "src"
+    "src",
+    "sample"
   ]
 }

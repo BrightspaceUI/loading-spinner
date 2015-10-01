@@ -11,3 +11,5 @@ lib
 # Test Coverage
 coverage
 
+# Sample dist folder	
+sample/dist

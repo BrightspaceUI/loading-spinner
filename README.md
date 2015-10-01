@@ -27,6 +27,24 @@ class Component extends React.Component {
     }
 }
 ```
+
+## Sample
+
+Included is a sample application which allows you to launch the file viewer with many different file types. To build the sample application, run:
+
+```shell
+npm run build-sample
+```
+
+To serve the sample application, run:
+
+```shell
+npm run serve
+```
+
+Then open `http://localhost:8080/` in your browser.
+
+
 ## Code Style
 
 This repository is configured with EditorConfig rules and contributions should make use of them. See the VUI Best Practices & Style Guide for more information.

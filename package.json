@@ -7,12 +7,14 @@
     "build:js": "eslint lib && babel src --ignore src/LoadingSpinner.scss --out-dir lib",
     "build:css": "node-sass --output-style expanded src/LoadingSpinner.scss lib/LoadingSpinner.css",
     "build": "npm run build:js && npm run build:css",
+    "build-sample": "node-sass ./sample/app.scss ./sample/dist/app.css && browserify -s app ./sample/app.js > ./sample/dist/app.js",
+    "serve": "http-server -p 8080 ./sample/",
     "clean-node-modules": "rimraf node_modules",
-    "test" : "npm run build && jest"
+    "test": "npm run build && jest"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Brightspace/react-valence-ui-loading-spinner"
   },
   "keywords": [
     "d2l",
@@ -28,15 +30,25 @@
     "babel": "^5.8.23",
     "babel-eslint": "^3.1.23",
     "babel-jest": "^5.3.0",
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
     "eslint": "^1.5.0",
     "eslint-plugin-react": "^3.4.2",
+    "http-server": "^0.8.5",
     "jest-cli": "^0.5.8",
     "node-sass": "^3.3.3",
     "rimraf": "^2.4.3"
   },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
     "testDirectoryName": "test",
-    "unmockedModulePathPatterns": ["react"]
+    "unmockedModulePathPatterns": [
+      "react"
+    ]
   }
 }
