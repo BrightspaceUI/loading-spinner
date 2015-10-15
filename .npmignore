@@ -1,9 +1,9 @@
 .editorconfig
-.eslintrc
+.gitattributes
 .gitignore
 .npmignore
 .travis.yml
 node_modules
-src
+karma.conf.js
 test
-sample
+error.css.scss

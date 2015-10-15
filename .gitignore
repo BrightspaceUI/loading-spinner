@@ -1,15 +1,3 @@
-# Logs
-logs
-*.log
-
-# Dependency directory
-node_modules
-
-#distributed files
-lib
-
-# Test Coverage
-coverage
-
-# Sample dist folder	
-sample/dist
+node_modules/
+test/output
+error.css

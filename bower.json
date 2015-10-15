@@ -1,18 +1,16 @@
 {
-  "name": "react-vui-loading-spinner",
-  "main": "lib/index.js", 
+  "name": "vui-loading-spinner",
+  "main": "loadingSpinner.scss",
   "license": "Apache-2.0",
   "ignore": [
     "test",
     ".csslintrc",
     ".editorconfig",
-    ".eslintrc",
     ".gitattributes",
     ".gitignore",
     ".npmignore",
     ".travis.yml",
-    "package.json",
-    "src",
-    "sample"
+    "karma.conf.js",
+    "package.json"
   ]
 }

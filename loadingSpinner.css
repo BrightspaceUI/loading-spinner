@@ -1,0 +1,42 @@
+.vui-loading-spinner {
+  border: 5px solid #cccccc;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.vui-loading-spinner:before {
+  animation: spin 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  -moz-transform-origin: 2.5px 2.5px;
+  -ms-transform-origin: 2.5px 2.5px;
+  -webkit-transform-origin: 2.5px 2.5px;
+  transform-origin: 2.5px 2.5px;
+  background: #cccccc;
+  -moz-border-radius: 2.5px;
+  -webkit-border-radius: 2.5px;
+  border-radius: 2.5px;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 35px;
+  left: calc( 50% - 2.5px);
+  top: calc( 50% -  2.5px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
