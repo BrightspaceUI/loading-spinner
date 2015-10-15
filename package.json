@@ -16,7 +16,8 @@
   "keywords": [
     "d2l",
     "valence-ui",
-    "vui"
+    "vui",
+    "loading"
   ],
   "author": "D2L Corporation",
   "license": "Apache-2.0",
