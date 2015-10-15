@@ -9,7 +9,7 @@
     "build:autoprefix": "postcss -c postcss.config.json",
     "build": "npm run build:sass && npm run build:autoprefix",
     "pretest": "npm run build",
-    "test": "karma start karma.conf.js"
+    "test": "csslint loadingSpinner.css && karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
