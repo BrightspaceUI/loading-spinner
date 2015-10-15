@@ -5,7 +5,9 @@
   "scripts": {
     "clean": "rimraf *.css",
     "prebuild": "npm run clean",
-    "build": "node-sass --output-style expanded loadingSpinner.css.scss loadingSpinner.css",
+    "build:sass": "node-sass --output-style expanded loadingSpinner.css.scss loadingSpinner.css",
+    "build:autoprefix": "postcss -c postcss.config.json",
+    "build": "npm run build:sass && npm run build:autoprefix",
     "pretest": "npm run build",
     "test": "karma start karma.conf.js"
   },
@@ -25,7 +27,10 @@
     "url": "https://github.com/Brightspace/valence-ui-loading-spinner/issues"
   },
   "homepage": "https://github.com/Brightspace/valence-ui-loading-spinner.git",
-  "dependencies": {},
+  "dependencies": {
+    "autoprefixer": "^6.0.3",
+    "postcss-cli": "^2.2.0"
+  },
   "devDependencies": {
     "csslint": "^0.10.0",
     "jasmine-dom-matchers": "^0.1.0",

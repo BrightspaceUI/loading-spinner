@@ -3,7 +3,9 @@
 .gitignore
 .npmignore
 .travis.yml
+bower_components
 node_modules
 karma.conf.js
 test
-error.css.scss
+loadingSpinner.css.scss
+postcss.config.json

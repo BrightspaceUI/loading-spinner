@@ -1,3 +1,5 @@
 node_modules/
 test/output
-error.css
+node_modules.
+bower_modules/
+loadingSpinner.css
