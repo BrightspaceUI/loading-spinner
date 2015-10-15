@@ -13,10 +13,11 @@
   height: 70px;
 }
 
-.vui-loading-spinner:before {
+.vui-loading-spinner::before {
+  -webkit-animation: spin 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  -moz-animation: spin 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
   animation: spin 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
   -moz-transform-origin: 2.5px 2.5px;
-  -ms-transform-origin: 2.5px 2.5px;
   -webkit-transform-origin: 2.5px 2.5px;
   transform-origin: 2.5px 2.5px;
   background: #cccccc;
@@ -28,8 +29,32 @@
   position: absolute;
   width: 5px;
   height: 35px;
+  left: 48%;
+  top: 48%;
+  left: -webkit-calc( 50% - 2.5px);
+  top: -webkit-calc( 50% - 2.5px);
+  left: -moz-calc( 50% - 2.5px);
+  top: -moz-calc( 50% - 2.5px);
   left: calc( 50% - 2.5px);
-  top: calc( 50% -  2.5px);
+  top: calc( 50% - 2.5px);
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(-180deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(-180deg);
+  }
+  to {
+    -moz-transform: rotate(180deg);
+  }
 }
 
 @keyframes spin {
