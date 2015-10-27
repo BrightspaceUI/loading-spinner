@@ -31,7 +31,7 @@ For further information on this component and other VUI components, see the docs
 #### Coding styles
 See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
-[npm-url]: https://www.npmjs.org/package/valence-ui-loading-spinner
-[npm-image]: https://img.shields.io/npm/v/valence-ui-loading-spinner.svg
+[npm-url]: https://www.npmjs.org/package/vui-loading-spinner
+[npm-image]: https://img.shields.io/npm/v/vui-loading-spinner.svg
 [ci-url]: https://travis-ci.org/Brightspace/valence-ui-loading-spinner
 [ci-image]: https://img.shields.io/travis-ci/Brightspace/valence-ui-loading-spinner.svg?branch=master
