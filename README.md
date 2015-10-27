@@ -2,7 +2,6 @@
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
-[![Dependency Status][dependencies-image]][dependencies-url]
 
 This component contains Sass mixins and CSS that can be used to create a loading spinner.
 
@@ -36,5 +35,3 @@ See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valenc
 [npm-image]: https://img.shields.io/npm/v/valence-ui-loading-spinner.svg
 [ci-url]: https://travis-ci.org/Brightspace/valence-ui-loading-spinner
 [ci-image]: https://img.shields.io/travis-ci/Brightspace/valence-ui-loading-spinner.svg?branch=master
-[dependencies-url]: https://david-dm.org/brightspace/valence-ui-loading-spinners
-[dependencies-image]: https://img.shields.io/david/Brightspace/valence-ui-loading-spinner.svg
