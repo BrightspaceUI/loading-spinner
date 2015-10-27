@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/Brightspace/valence-ui-loading-spinner/issues"
   },
-  "homepage": "https://github.com/Brightspace/valence-ui-loading-spinner.git",
+  "homepage": "https://github.com/Brightspace/valence-ui-loading-spinner",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.0.3",
