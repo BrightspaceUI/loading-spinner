@@ -30,10 +30,8 @@ $vui-loading-spinner-color: #cccccc !default;
 		position: absolute;
 		width: $thickness;
 		height: $halfSize;
-		left: 48%; // For browsers that don't support calc
-		top: 48%; // For browsers that don't support calc
-		left: calc( 50% - #{$halfThickness} );
-		top: calc( 50% - #{$halfThickness} );
+		left: $halfSize - 1.5 * $thickness;
+		top: $halfSize - 1.5 * $thickness;
 
     }
 
