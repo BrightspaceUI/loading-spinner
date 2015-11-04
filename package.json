@@ -1,6 +1,6 @@
 {
   "name": "vui-loading-spinner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mixins and CSS for styling loading spinner",
   "scripts": {
     "clean": "rimraf *.css",
