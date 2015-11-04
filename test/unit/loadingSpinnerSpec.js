@@ -18,10 +18,13 @@
 		describe( 'loading spinner container', function() {
 
 			var node;
+			var armNode;
 
 			beforeEach( function () {
 				node = document.body.appendChild( document.createElement( 'div' ) );
 				node.className = 'vui-loading-spinner';
+				armNode = document.createElement( 'div' );
+				node.appendChild( armNode );
 			});
 
 			afterEach( function() {
@@ -52,8 +55,20 @@
 				expect( node ).toHaveHeight( '70px' );
 			});
 
-			it( 'has before element display block', function() {
-				expect( node ).toHaveBeforeElementDisplay( 'block' );
+			it( 'spinner arm has display block', function() {
+				expect( armNode ).toHaveDisplay( 'block' );
+			});
+
+			it( 'spinner arm has width 5px', function() {
+				expect( armNode ).toHaveWidth( '5px' );
+			});
+
+			it( 'spinner arm has height 35px', function() {
+				expect( armNode ).toHaveHeight( '35px' );
+			});
+
+			it( 'has 2px border radius', function() {
+				expect( armNode ).toHaveBorderRadius( '2px' );
 			});
 		} );
 	} );
