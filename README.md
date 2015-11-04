@@ -11,7 +11,9 @@ This component contains Sass mixins and CSS that can be used to create a loading
 
 ```js
 //HTML
-<span class='container' />
+<div class='container'>
+	<div/> // Needed in order to load the spinner arm
+</div>
 
 //CSS or SASS
 .container {
