@@ -12,7 +12,7 @@ This component contains Sass mixins and CSS that can be used to create a loading
 ```js
 //HTML
 <div class='container'>
-	<div/> // Needed in order to load the spinner arm
+	<div/> // Needed in order to load the spinner arm. Animations on psuedo elements in safari 6 do not work
 </div>
 
 //CSS or SASS
