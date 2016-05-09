@@ -1,15 +1,11 @@
 {
   "name": "vui-loading-spinner",
-  "version": "1.0.0",
-  "description": "Mixins and CSS for styling loading spinner",
+  "version": "2.0.0",
+  "description": "Web component loading spinner",
+  "private": true,
   "scripts": {
-    "clean": "rimraf *.css",
-    "prebuild": "npm run clean",
-    "build:sass": "node-sass --output-style expanded loadingSpinner.css.scss loadingSpinner.css",
-    "build:autoprefix": "postcss -c postcss.config.json",
-    "build": "npm run build:sass && npm run build:autoprefix",
-    "pretest": "npm run build",
-    "test": "csslint loadingSpinner.css && karma start karma.conf.js"
+    "postinstall": "bower install",
+    "test": "polylint"
   },
   "repository": {
     "type": "git",
@@ -27,17 +23,8 @@
     "url": "https://github.com/Brightspace/valence-ui-loading-spinner/issues"
   },
   "homepage": "https://github.com/Brightspace/valence-ui-loading-spinner",
-  "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^6.0.3",
-    "csslint": "^0.10.0",
-    "jasmine-dom-matchers": "^0.1.0",
-    "karma": "^0.12.32",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "karma-jasmine": "^0.3.5",
-    "karma-cli": "0.0.4",
-    "node-sass": "^3.1.1",
-    "postcss-cli": "^2.2.0",
-    "rimraf": "^2.3.4"
+    "bower": "^1.7.9",
+    "polylint": "^2.10.0"
   }
 }

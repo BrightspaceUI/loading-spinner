@@ -1,0 +1,139 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="vui-loading-spinner">
+	<template>
+		<style>
+			:host > #outer-circle {
+				border-radius: 50%;
+				box-sizing: border-box;
+				display: inline-block;
+				overflow: hidden;
+				position: relative;
+			}
+
+			:host > #outer-circle > #spinner-arm {
+				animation: vui-loading-spinner-animation 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+				content: '';
+				display: block;
+				position: absolute;
+			}
+
+			@keyframes vui-loading-spinner-animation {
+				from { transform: rotate(-180deg); }
+				to { transform: rotate(180deg); }
+			}
+
+		</style>
+
+		<div id='outer-circle'>
+			<div id='spinner-arm'></div>
+		</div>
+	</template>
+
+	<script>
+
+	Polymer({
+		is: 'vui-loading-spinner',
+
+		properties: {
+			size: {
+				type: String,
+				value: '70px'
+			},
+
+			thickness: {
+				type: String,
+				value: '5px'
+			},
+
+			color: {
+				type: String,
+				value: '#CCCCCC'
+			}
+		},
+
+		created: function() {
+			// supported unit types
+			this.units = [ 'em', 'ex', 'px', 'cm', 'mm', 'in', 'pt', 'pc', 'ch', 'rem'];
+		},
+
+		ready: function() {
+
+			var parsedSize = this._parseCSSLength( this.size );
+			var parsedThickness = this._parseCSSLength( this.thickness );
+
+			if ( !parsedSize || !parsedThickness ) {
+				console.error( 'Unit type for size or thickness not supported' );
+				return;
+			}
+
+			var sizeUnit = parsedSize[1];
+			var thicknessUnit = parsedThickness[1];
+
+			if ( sizeUnit !== thicknessUnit ) {
+				console.error( 'CSS Unit mismatch. Units must be the same for both size and thickness' );
+				return;
+			}
+
+			this.unit = sizeUnit;
+
+			this.size = parseFloat( parsedSize[0] );
+			this.halfSize = ( this.size / 2  );
+
+			this.thickness = parseFloat( parsedThickness[0] );
+			this.halfThickness = ( this.thickness / 2 );
+
+			this._renderOuterCircle();
+			this._renderSpinnerArm();
+		},
+
+		_renderOuterCircle: function() {
+
+			var outerCircle = this.$$( '#outer-circle' );
+
+			var borderWidth =  this._formatCSSString( '{0}{1}', [this.thickness, this.unit] );
+			outerCircle.style.border = this._formatCSSString( '{0} solid {1}', [borderWidth, this.color] );
+
+			var formattedSize = this._formatCSSString( '{0}{1}', [this.size, this.unit] );
+			outerCircle.style.width = formattedSize;
+			outerCircle.style.height = formattedSize;
+		},
+
+		_renderSpinnerArm: function() {
+			var spinnerArm = this.$$( '#spinner-arm' );
+
+			var origin = this._formatCSSString( '{0}{1}', [this.halfThickness, this.unit] );
+			spinnerArm.style.transformOrigin = this._formatCSSString( '{0} {1}', [origin, origin] );
+
+			spinnerArm.style.background = this.color;
+			spinnerArm.style.borderRadius = this._formatCSSString( '{0}{1}', [this.halfThickness, this.unit] );
+			spinnerArm.style.width = this._formatCSSString( '{0}{1}', [this.thickness, this.unit] ),
+			spinnerArm.style.height = this._formatCSSString( '{0}{1}', [this.halfSize, this.unit] );
+
+			var location = ( this.halfSize - 1.5 * this.thickness );
+			var formattedLocation = this._formatCSSString( '{0}{1}', [location, this.unit] );
+
+			spinnerArm.style.left = formattedLocation;
+			spinnerArm.style.top = formattedLocation;
+		},
+
+		_parseCSSLength: function( strLength ) {
+			for ( var i = 0; i < this.units.length; i++ ) {
+				var unit = this.units[i]
+				if ( strLength.indexOf( unit ) !== -1 ) {
+					var value = strLength.split( this.units[i] )[0];
+					return [ value, unit ];
+				}
+			}
+
+			return null;
+		},
+
+		_formatCSSString: function( str, args ) {
+			return str.replace( /{(\d+)}/g, function( match, number ) {
+				return typeof args[number] != 'undefined' ? args[number] : match;
+			});
+		}
+	});
+	</script>
+</dom-module>
