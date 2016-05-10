@@ -1,39 +1,59 @@
+**Looking for SASS-based `vui-button`?** It's [over here](https://github.com/Brightspace/valence-ui-button/tree/sass).
+
 # vui-loading-spinner
 
-[![NPM version][npm-image]][npm-url]
+[![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
-This component contains Sass mixins and CSS that can be used to create a loading spinner.
+A Valence UI, [Polymer](https://www.polymer-project.org/1.0/)-based web component button element.
+
+![screenshot of button component](/screenshots/screenshot.png?raw=true)
+
+For further information on this and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
+
+## Installation
+
+`vui-button` can be installed from [Bower][bower-url]:
+```shell
+bower install vui-loading-spinner
+```
 
 ## Usage
 
-`@include vui-loading-spinner( size, thickness, colour )` Accepts all unit types except for **%**
+Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), then import `button.html`:
 
-```js
-//HTML
-<div class='container'>
-	<div/> // Needed in order to load the spinner arm. Animations on psuedo elements in safari 6 do not work
-</div>
-
-//CSS or SASS
-.container {
-	@include vui-loading-spinner; //Will use default style
-}
-
-OR
-
-.container {
-	@include vui-loading-spinner( 10px, 20px, #ccccc )
-}
-
+```html
+<head>
+	<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
+	<link rel="import" href="../vui-loading-spinner/loading-spinner.html">
+</head>
 ```
 
-For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
+The component can now be used as shown below:
 
-#### Coding styles
+```html
+<vui-loading-spinner></vui-loading-spinner>
+```
+
+It accepts the following attributes:
+
+```size```: Size of the loading spinner.
+```thickness``: Thickness of the spinner
+```color```: Color of the spinner.
+
+**NOTE**: Size and thickness accepts the following unit values: 'em', 'ex', 'px', 'cm', 'mm', 'in', 'pt', 'pc', 'ch', 'rem'. The unit type for size and thickness **must** be the same.
+
+### Usage in Production
+
+In production, it's recommended to use a build tool like [Vulcanize](https://github.com/Polymer/vulcanize) to combine all your web components into a single import file. [More from the Polymer Docs: Optimize for Production](https://www.polymer-project.org/1.0/tools/optimize-for-production.html)...
+
+## Coding styles
+
 See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
-[npm-url]: https://www.npmjs.org/package/vui-loading-spinner
-[npm-image]: https://img.shields.io/npm/v/vui-loading-spinner.svg
+[bower-url]: http://bower.io/search/?q=vui-loading-spinner
+[bower-image]: https://img.shields.io/bower/v/vui-loading-spinner.svg
 [ci-url]: https://travis-ci.org/Brightspace/valence-ui-loading-spinner
-[ci-image]: https://img.shields.io/travis-ci/Brightspace/valence-ui-loading-spinner.svg?branch=master
+[ci-image]: https://travis-ci.org/Brightspace/valence-ui-loading-spinner.svg?branch=master
+[dependencies-url]: https://david-dm.org/brightspace/valence-ui-loading-spinner
+[dependencies-image]: https://img.shields.io/david/Brightspace/valence-ui-loading-spinner.svg

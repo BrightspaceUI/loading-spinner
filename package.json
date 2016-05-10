@@ -4,7 +4,13 @@
   "description": "Web component loading spinner",
   "private": true,
   "scripts": {
+    "prebuild": "cpy *.html ./bower_components/temp",
+    "build": "vulcanize ./bower_components/temp/loading-spinner.html > ./test/perceptual/loading-spinner.html.ignore",
+    "postbuild": "rimraf ./bower_components/temp",
+    "preperceptual-diff": "npm run build",
+    "perceptual-diff": "percy snapshot test/perceptual --enable_javascript",
     "postinstall": "bower install",
+    "screenshot": "phantomjs ./screenshots/build.js",
     "test": "polylint"
   },
   "repository": {
@@ -25,6 +31,10 @@
   "homepage": "https://github.com/Brightspace/valence-ui-loading-spinner",
   "devDependencies": {
     "bower": "^1.7.9",
-    "polylint": "^2.10.0"
+    "cpy-cli": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.4",
+    "polylint": "^2.10.0",
+    "rimraf": "^2.5.2",
+    "vulcanize": "^1.14.8"
   }
 }
