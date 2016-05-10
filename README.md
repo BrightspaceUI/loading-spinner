@@ -13,14 +13,14 @@ For further information on this and other VUI components, see the docs at [ui.va
 
 ## Installation
 
-`vui-button` can be installed from [Bower][bower-url]:
+`vui-loading-spinner` can be installed from [Bower][bower-url]:
 ```shell
 bower install vui-loading-spinner
 ```
 
 ## Usage
 
-Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), then import `button.html`:
+Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), then import `loading-spinner.html`:
 
 ```html
 <head>
@@ -38,10 +38,12 @@ The component can now be used as shown below:
 It accepts the following attributes:
 
 ```size```: Size of the loading spinner.
-```thickness``: Thickness of the spinner
-```color```: Color of the spinner.
 
-**NOTE**: Size and thickness accepts the following unit values: 'em', 'ex', 'px', 'cm', 'mm', 'in', 'pt', 'pc', 'ch', 'rem'. The unit type for size and thickness **must** be the same.
+```thickness``: Thickness of the spinner
+
+```color```: Color of the spinner. Accepts all html color values.
+
+**NOTE**: Size and thickness accepts the following unit values: ```em```, ```ex```, ```px```, ```cm```, ```mm```, ```in```, ```pt```, ```pc```, ```ch```, ```rem```. The unit type for size and thickness **must** be the same.
 
 ### Usage in Production
 
