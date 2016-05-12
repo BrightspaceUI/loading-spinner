@@ -1,4 +1,4 @@
-**Looking for SASS-based `vui-button`?** It's [over here](https://github.com/Brightspace/valence-ui-button/tree/sass).
+**Looking for SASS-based `vui-loading-spinner`?** It's [over here](https://github.com/Brightspace/valence-ui-button/tree/sass).
 
 # vui-loading-spinner
 
@@ -40,7 +40,7 @@ It accepts the following attributes:
 
 ```size```: Size of the loading spinner.
 
-```thickness``: Thickness of the spinner
+```thickness```: Thickness of the spinner
 
 ```color```: Color of the spinner. Accepts all html color values.
 
