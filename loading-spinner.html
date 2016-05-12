@@ -3,7 +3,7 @@
 <dom-module id="vui-loading-spinner">
 	<template>
 		<style>
-			:host > #outer-circle {
+			.vui-loading-spinner-outer-circle {
 				border-radius: 50%;
 				box-sizing: border-box;
 				display: inline-block;
@@ -11,11 +11,12 @@
 				position: relative;
 			}
 
-			:host > #outer-circle > #spinner-arm {
+			.vui-loading-spinner-outer-circle > .vui-loading-spinner-inner-arm {
 				animation: vui-loading-spinner-animation 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 				content: '';
 				display: block;
 				position: absolute;
+				border-width: 0px;
 			}
 
 			@keyframes vui-loading-spinner-animation {
@@ -25,8 +26,8 @@
 
 		</style>
 
-		<div id='outer-circle'>
-			<div id='spinner-arm'></div>
+		<div class='vui-loading-spinner-outer-circle'>
+			<div class='vui-loading-spinner-inner-arm'></div>
 		</div>
 	</template>
 
@@ -89,7 +90,7 @@
 
 		_renderOuterCircle: function() {
 
-			var outerCircle = this.$$( '#outer-circle' );
+			var outerCircle = this.$$( '.vui-loading-spinner-outer-circle' );
 
 			var borderWidth =  this._formatCSSString( '{0}{1}', [this.thickness, this.unit] );
 			outerCircle.style.border = this._formatCSSString( '{0} solid {1}', [borderWidth, this.color] );
@@ -100,7 +101,7 @@
 		},
 
 		_renderSpinnerArm: function() {
-			var spinnerArm = this.$$( '#spinner-arm' );
+			var spinnerArm = this.$$( '.vui-loading-spinner-inner-arm' );
 
 			var origin = this._formatCSSString( '{0}{1}', [this.halfThickness, this.unit] );
 			spinnerArm.style.transformOrigin = this._formatCSSString( '{0} {1}', [origin, origin] );
