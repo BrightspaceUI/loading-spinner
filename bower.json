@@ -16,6 +16,7 @@
     ".gitattributes",
     ".gitignore",
     ".travis.yml",
+    ".ignore",
     "package.json",
     "node_modules",
     "bower_components",

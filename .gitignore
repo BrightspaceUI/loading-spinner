@@ -3,3 +3,4 @@ test/output
 node_modules.
 bower_components/
 loadingSpinner.css
+*.ignore
