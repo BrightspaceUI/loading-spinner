@@ -24,6 +24,8 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "^1.4.0"
+    "polymer": "^1.4.0",
+    "iron-iconset-svg": "~1.0.9",
+    "iron-icon": "~1.0.8"
   }
 }
