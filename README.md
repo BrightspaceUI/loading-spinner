@@ -36,15 +36,7 @@ The component can now be used as shown below:
 <vui-loading-spinner></vui-loading-spinner>
 ```
 
-It accepts the following attributes:
-
-```size```: Size of the loading spinner.
-
-```thickness```: Thickness of the spinner
-
-```color```: Color of the spinner. Accepts all html color values.
-
-**NOTE**: Size and thickness accepts the following unit values: ```em```, ```ex```, ```px```, ```cm```, ```mm```, ```in```, ```pt```, ```pc```, ```ch```, ```rem```. The unit type for size and thickness **must** be the same.
+The size can be changed using the font-size property.
 
 ### Usage in Production
 
