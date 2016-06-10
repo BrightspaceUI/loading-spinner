@@ -1,4 +1,4 @@
-**Looking for SASS-based `vui-loading-spinner`?** It's [over here](https://github.com/Brightspace/valence-ui-button/tree/sass).
+**Looking for SASS-based `vui-loading-spinner`?** It's [over here](https://github.com/Brightspace/valence-ui-loading-spinner/tree/sass).
 
 # vui-loading-spinner
 
