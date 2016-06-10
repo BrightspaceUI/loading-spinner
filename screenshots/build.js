@@ -1,5 +1,5 @@
 var page = require('webpage').create();
-page.viewportSize = {width: 1000, height: 1000};
+page.viewportSize = {width: 200, height: 200};
 page.open('./test/perceptual/loading-spinner.html', function() {
 
 	var clipRect = page.evaluate( function () {
@@ -18,4 +18,5 @@ page.open('./test/perceptual/loading-spinner.html', function() {
 		page.render('screenshot.png');
 		phantom.exit();
 	}, 500 );
+
 });
