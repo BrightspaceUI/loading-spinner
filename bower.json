@@ -1,16 +1,31 @@
 {
   "name": "vui-loading-spinner",
-  "main": "loadingSpinner.scss",
+  "main": [
+    "loading-spinner.html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brightspace/valence-ui-loading-spinner.git"
+  },
+  "authors": [
+    "D2L Corporation"
+  ],
   "license": "Apache-2.0",
   "ignore": [
-    "test",
-    ".csslintrc",
     ".editorconfig",
     ".gitattributes",
     ".gitignore",
-    ".npmignore",
     ".travis.yml",
-    "karma.conf.js",
-    "package.json"
-  ]
+    ".ignore",
+    "package.json",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.4.0",
+    "iron-iconset-svg": "~1.0.9",
+    "iron-icon": "~1.0.8"
+  }
 }
