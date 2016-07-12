@@ -1,7 +1,7 @@
 {
-  "name": "vui-loading-spinner",
+  "name": "d2l-loading-spinner",
   "main": [
-    "loading-spinner.html"
+    "d2l-loading-spinner.html"
   ],
   "repository": {
     "type": "git",
