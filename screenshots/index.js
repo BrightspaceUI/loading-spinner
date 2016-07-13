@@ -11,6 +11,11 @@ setTimeout( function() {
 		}
 		// wait for component to load
 		setTimeout( function() {
+			var clipRect = page.evaluate( function() {
+				var screenshot = document.querySelector( '.spinner' );
+				return screenshot.getBoundingClientRect();
+			});
+			page.clipRect = clipRect;
 			page.render('screenshots/screenshot.png');
 			console.log('success');
 			phantom.exit();
