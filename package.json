@@ -1,6 +1,5 @@
 {
   "name": "d2l-loading-spinner",
-  "version": "2.0.0",
   "description": "Web component loading spinner",
   "private": true,
   "scripts": {
