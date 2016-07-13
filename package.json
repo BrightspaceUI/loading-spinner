@@ -14,20 +14,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/valence-ui-loading-spinner.git"
+    "url": "https://github.com/Brightspace/d2l-loading-spinner-ui.git"
   },
   "keywords": [
     "d2l",
-    "valence-ui",
-    "vui",
+    "polymer",
     "loading"
   ],
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Brightspace/valence-ui-loading-spinner/issues"
+    "url": "https://github.com/Brightspace/d2l-loading-spinner-ui/issues"
   },
-  "homepage": "https://github.com/Brightspace/valence-ui-loading-spinner",
+  "homepage": "https://github.com/Brightspace/d2l-loading-spinner-ui",
   "devDependencies": {
     "bower": "^1.7.9",
     "eslint": "^3.0.1",
