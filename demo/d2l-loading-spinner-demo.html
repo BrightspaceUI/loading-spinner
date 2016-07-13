@@ -1,0 +1,58 @@
+<link rel="import" href="../d2l-loading-spinner.html">
+
+<dom-module id="d2l-loading-spinner-demo">
+	<template>
+		<style>
+			h1, p {
+				text-align: center;
+				margin: 0;
+			}
+			.small {
+				--d2l-loading-spinner-size: 50px;
+			}
+
+			.big {
+				--d2l-loading-spinner-size: 100px;
+			}
+
+			.bigger {
+				--d2l-loading-spinner-size: 200px;
+			}
+
+			.bigger-vanilla {
+				width: 200px;
+				height: 200px;
+			}
+
+			.red {
+				color: red;
+			}
+
+			.positioned {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+		<h1>D2L Loading Spinner demo</h1>
+		<p>Default</p>
+		<d2l-loading-spinner></d2l-loading-spinner>
+		<p>Small (50px)</p>
+		<d2l-loading-spinner class="small"></d2l-loading-spinner>
+		<p>Big (100px)</p>
+		<d2l-loading-spinner class="big"></d2l-loading-spinner>
+		<p>Bigger (200px)</p>
+		<d2l-loading-spinner class="bigger"></d2l-loading-spinner>
+		<p>Red</p>
+		<d2l-loading-spinner class="bigger red"></d2l-loading-spinner>
+		<p>Bigger (200px) using height/width css</p>
+		<d2l-loading-spinner class="bigger-vanilla"></d2l-loading-spinner>
+		<p class="positioned">Positioned to top-left</p>
+		<d2l-loading-spinner class="positioned bigger"></d2l-loading-spinner>
+	</template>
+	<script>
+	Polymer({
+		is: 'd2l-loading-spinner-demo'
+	});
+	</script>
+</dom-module>

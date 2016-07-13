@@ -1,10 +1,3 @@
 language: node_js
 node_js:
 - stable
-before_script:
-- gem install percy-cli
-after_success:
-- '[ "$TRAVIS_SECURE_ENV_VARS" = "true" ] && npm run perceptual-diff'
-env:
-  global:
-    secure: LdJN/71JJO9IFjWBOtdh2rGqPtqe9Wqsw6HUyY40D0MPQyHEPMk9yTva/q9TwuW3epZQeCDb8rwlxgIM+gQxkFNYfPEQbWpYmVkyqSUV0L4mC2P5Y7l0xP8Ma4NAb2dxjdNyq1DoNWqIvaPRGd3L3MGt2DfTlhvz1MytbQA9e37NNhdRB9egJMvRvcwXH1qSzTA4O80SzQt/JwwCXwdgKYkd/tmE0X8cOs2UJhZmnxalqDwhAtwzgKM32/s82WgGpRnKEqr9ewmBhlj+Bi7oWY92Sp+Bd1X31lNb/YZQfKlTbi+E8Q7Z4ixBBTDA09tDAdUM1VCC3b2c67gP7Ddeq/Cb3FeTidgoHk/2KWU5rPkRQISsiKndWV/oo+ij6Jvy7MJXbWJ3BSbakPRFpQL+CS7PkG/K7tf4yIw17B1Ae9DE9AIH1GE/mVrrQ2bO2jLMDcopT8aZ/zw+tOJNbGkTi6qqaDq1MIw/gPt7VmAMt1s47IE9cK08wCQRlkLYjWjOoBOCBrxJw3CKX9No5EzsxuD9bc5/RkAsCSpEQWW+Cr4/vT8h4HkczthzjjMVa3Ri6DN88FVwvl+UMAgJcvLA87iRoXujRxbaOa05HLyZOBFwftif6mKRzh08RT+RWvLbdh7SYkKTTclTWHeUc3utTPJvrdtQ+gdxH1BusYR3T+U=

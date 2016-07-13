@@ -1,11 +1,11 @@
 {
-  "name": "vui-loading-spinner",
+  "name": "d2l-loading-spinner",
   "main": [
-    "loading-spinner.html"
+    "d2l-loading-spinner.html"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/valence-ui-loading-spinner.git"
+    "url": "https://github.com/Brightspace/d2l-loading-spinner-ui.git"
   },
   "authors": [
     "D2L Corporation"
@@ -24,6 +24,9 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "^1.4.0"
+    "polymer": "^1.5.0",
+    "iron-icon": "^1.0.0",
+    "iron-iconset-svg": "^1.0.0",
+    "d2l-colors": "^2.0.0"
   }
 }

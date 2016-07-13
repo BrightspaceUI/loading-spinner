@@ -1,40 +1,39 @@
 {
-  "name": "vui-loading-spinner",
-  "version": "2.0.0",
+  "name": "d2l-loading-spinner",
   "description": "Web component loading spinner",
   "private": true,
   "scripts": {
-    "prebuild": "cpy *.html ./bower_components/temp",
-    "build": "vulcanize ./bower_components/temp/loading-spinner.html > ./test/perceptual/loading-spinner.html.ignore",
-    "postbuild": "rimraf ./bower_components/temp",
-    "preperceptual-diff": "npm run build",
-    "perceptual-diff": "percy snapshot test/perceptual --enable_javascript",
     "postinstall": "bower install",
-    "screenshot": "phantomjs ./screenshots/build.js",
-    "test": "polylint"
+    "test": "npm run test:lint:js && npm run test:lint:wc",
+    "test:lint:js": "eslint *.html",
+    "test:lint:wc": "polylint",
+    "serve": "polymer serve",
+    "screenshot:phantomjs": "phantomjs screenshots/index.js",
+    "screenshot": "parallelshell \"npm run serve -s\" \"npm run screenshot:phantomjs -s\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/valence-ui-loading-spinner.git"
+    "url": "https://github.com/Brightspace/d2l-loading-spinner-ui.git"
   },
   "keywords": [
     "d2l",
-    "valence-ui",
-    "vui",
+    "polymer",
     "loading"
   ],
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Brightspace/valence-ui-loading-spinner/issues"
+    "url": "https://github.com/Brightspace/d2l-loading-spinner-ui/issues"
   },
-  "homepage": "https://github.com/Brightspace/valence-ui-loading-spinner",
+  "homepage": "https://github.com/Brightspace/d2l-loading-spinner-ui",
   "devDependencies": {
     "bower": "^1.7.9",
-    "cpy-cli": "^1.0.0",
-    "phantomjs-prebuilt": "^2.1.4",
-    "polylint": "^2.10.0",
-    "rimraf": "^2.5.2",
-    "vulcanize": "^1.14.8"
+    "eslint": "^3.0.1",
+    "eslint-config-brightspace": "^0.2.1",
+    "eslint-plugin-html": "^1.5.1",
+    "parallelshell": "^2.0.0",
+    "phantomjs-prebuilt": "^2.1.7",
+    "polylint": "^2.10.1",
+    "polymer-cli": "^0.12.0"
   }
 }
