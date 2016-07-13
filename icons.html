@@ -4,7 +4,16 @@
 	<svg>
 	    <defs>
 			<g id="bg" fill="none" fill-rule="evenodd" transform="translate(5 5)">
-				<circle stroke="none" fill="#FFF" cx="16" cy="16" r="16"/>
+				<filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="shadow">
+		            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+		            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+		            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.07 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+		            <feMerge>
+		                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+		                <feMergeNode in="SourceGraphic"></feMergeNode>
+		            </feMerge>
+		        </filter>
+				<circle stroke="none" fill="#FFF" cx="16" cy="16" r="16" filter="url(#shadow)"/>
 				<circle stroke-width="2" cx="16" cy="16" r="11"/>
 			</g>
 			<g id="slice" fill="none" fill-rule="evenodd">
