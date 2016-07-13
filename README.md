@@ -45,7 +45,7 @@ In production, it's recommended to use a build tool like [Vulcanize](https://git
 
 See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
-[bower-url]: http://bower.io/search/?q=d2l-loading-spinner-ui
-[bower-image]: https://img.shields.io/bower/v/d2l-loading-spinner-ui.svg
+[bower-url]: http://bower.io/search/?q=d2l-loading-spinner
+[bower-image]: https://img.shields.io/bower/v/d2l-loading-spinner.svg
 [ci-url]: https://travis-ci.org/Brightspace/d2l-loading-spinner-ui
 [ci-image]: https://travis-ci.org/Brightspace/d2l-loading-spinner-ui.svg?branch=master
