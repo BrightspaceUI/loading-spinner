@@ -2,19 +2,16 @@
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../d2l-colors/d2l-colors.html">
 <link rel="import" href="./icons.html">
-
 <dom-module id="d2l-loading-spinner">
 	<template>
 		<style include="d2l-colors">
 			:host {
-				--d2l-loading-spinner-size: 50px;
-				--d2l-loading-spinner-color: var(--d2l-color-celestine);
-				color: var(--d2l-loading-spinner-color);
+				color: var(--d2l-loading-spinner-color, --d2l-color-celestine);
 				display: inline-block;
-				height: var(--d2l-loading-spinner-size);
+				height: var(--d2l-loading-spinner-size, 50px);
 				overflow: hidden;
 				position: relative;
-				width: var(--d2l-loading-spinner-size);
+				width: var(--d2l-loading-spinner-size, 50px);
 			}
 
 			:host .d2l-loading-spinner-bg {
