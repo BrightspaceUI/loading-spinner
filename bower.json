@@ -1,8 +1,6 @@
 {
   "name": "d2l-loading-spinner",
-  "main": [
-    "d2l-loading-spinner.html"
-  ],
+  "main": "d2l-loading-spinner.html",
   "repository": {
     "type": "git",
     "url": "https://github.com/Brightspace/d2l-loading-spinner-ui.git"
@@ -16,12 +14,7 @@
     ".gitattributes",
     ".gitignore",
     ".travis.yml",
-    ".ignore",
-    "package.json",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "package.json"
   ],
   "dependencies": {
     "polymer": "^1.5.0",
