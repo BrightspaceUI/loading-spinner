@@ -6,10 +6,7 @@
     "postinstall": "bower install",
     "test": "npm run test:lint:js && npm run test:lint:wc",
     "test:lint:js": "eslint *.html",
-    "test:lint:wc": "polylint",
-    "serve": "polymer serve",
-    "screenshot:phantomjs": "phantomjs screenshots/index.js",
-    "screenshot": "parallelshell \"npm run serve -s\" \"npm run screenshot:phantomjs -s\""
+    "test:lint:wc": "polylint"
   },
   "repository": {
     "type": "git",
@@ -31,8 +28,6 @@
     "eslint": "^3.0.1",
     "eslint-config-brightspace": "^0.2.1",
     "eslint-plugin-html": "^1.5.1",
-    "parallelshell": "^2.0.0",
-    "phantomjs-prebuilt": "^2.1.7",
     "polylint": "^2.10.1",
     "polymer-cli": "^0.12.0"
   }
