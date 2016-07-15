@@ -7,7 +7,7 @@
 
 A Valence UI, [Polymer](https://www.polymer-project.org/1.0/)-based web component loading element.
 
-![screenshot of loading component](/screenshots/screenshot.png?raw=true)
+![screenshot of loading component](/loading-spinner.gif?raw=true)
 
 For further information on this and other D2L UI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
