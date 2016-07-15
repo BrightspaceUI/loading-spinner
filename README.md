@@ -5,7 +5,7 @@
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
-A Valence UI, [Polymer](https://www.polymer-project.org/1.0/)-based web component loading element.
+A [Polymer](https://www.polymer-project.org/1.0/)-based web component loading spinner.
 
 ![screenshot of loading component](/loading-spinner.gif?raw=true)
 
@@ -35,7 +35,43 @@ The component can now be used as shown below:
 <d2l-loading-spinner></d2l-loading-spinner>
 ```
 
-The size can be changed using the font-size property.
+### Size
+
+The size (default `50px`) can be adjusted using the `size` attribute:
+
+```html
+<d2l-loading-spinner size="100"></d2l-loading-spinner>
+```
+
+Or by setting the `--d2l-loading-spinner-size` [CSS property](https://www.polymer-project.org/1.0/docs/devguide/styling#custom-css-properties):
+
+```html
+<style is="custom-style">
+.huge-spinner {
+	--d2l-loading-spinner-size: 400px;
+}
+</style>
+<d2l-loading-spinner class="huge-spinner"></d2l-loading-spinner>
+```
+
+### Color
+
+While not recommended, the default color (blue) can be set using the `color` attribute:
+
+```html
+<d2l-loading-spinner color="red"></d2l-loading-spinner>
+```
+
+Or by setting the `--d2l-loading-spinner-color` [CSS property](https://www.polymer-project.org/1.0/docs/devguide/styling#custom-css-properties):
+
+```html
+<style is="custom-style">
+.red-spinner {
+	--d2l-loading-spinner-color: red;
+}
+</style>
+<d2l-loading-spinner class="red-spinner"></d2l-loading-spinner>
+```
 
 ### Usage in Production
 
@@ -43,7 +79,7 @@ In production, it's recommended to use a build tool like [Vulcanize](https://git
 
 ## Coding styles
 
-See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
+See the [Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
 [bower-url]: http://bower.io/search/?q=d2l-loading-spinner
 [bower-image]: https://img.shields.io/bower/v/d2l-loading-spinner.svg

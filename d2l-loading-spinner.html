@@ -1,4 +1,4 @@
-<link rel="import" href="../polymer/polymer-mini.html">
+<link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../d2l-colors/d2l-colors.html">
 <link rel="import" href="./icons.html">
@@ -7,12 +7,14 @@
 	<template>
 		<style include="d2l-colors">
 			:host {
-				display: block;
+				--d2l-loading-spinner-size: 50px;
+				--d2l-loading-spinner-color: var(--d2l-color-celestine);
+				color: var(--d2l-loading-spinner-color);
+				display: inline-block;
+				height: var(--d2l-loading-spinner-size);
+				overflow: hidden;
 				position: relative;
-				color: var(--d2l-color-celestine);
-				width: var(--d2l-loading-spinner-size, 50px);
-				height: var(--d2l-loading-spinner-size, 50px);
-				margin: 0 auto;
+				width: var(--d2l-loading-spinner-size);
 			}
 
 			:host .d2l-loading-spinner-bg {
@@ -132,7 +134,23 @@
 	</template>
 	<script>
 	Polymer({
-		is: 'd2l-loading-spinner'
+		is: 'd2l-loading-spinner',
+		properties: {
+			color: {
+				observer: '_colorChanged',
+				type: String
+			},
+			size: {
+				observer: '_sizeChanged',
+				type: Number
+			}
+		},
+		_colorChanged: function(newColor) {
+			this.customStyle['--d2l-loading-spinner-color'] = newColor;
+		},
+		_sizeChanged: function(newSize) {
+			this.customStyle['--d2l-loading-spinner-size'] = newSize + 'px';
+		}
 	});
 	</script>
 </dom-module>
