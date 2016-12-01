@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/d2l-loading-spinner-ui.git"
+    "url": "https://github.com/BrightspaceUI/loading-spinner.git"
   },
   "keywords": [
     "d2l",
@@ -20,9 +20,9 @@
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Brightspace/d2l-loading-spinner-ui/issues"
+    "url": "https://github.com/BrightspaceUI/loading-spinner/issues"
   },
-  "homepage": "https://github.com/Brightspace/d2l-loading-spinner-ui",
+  "homepage": "https://github.com/BrightspaceUI/loading-spinner",
   "devDependencies": {
     "bower": "^1.7.9",
     "eslint": "^3.0.1",

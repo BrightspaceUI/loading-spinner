@@ -1,4 +1,4 @@
-**Looking for SASS-based `d2l-loading-spinner`?** It's [over here](https://github.com/Brightspace/d2l-loading-spinner-ui/tree/sass).
+**Looking for SASS-based `d2l-loading-spinner`?** It's [over here](https://github.com/BrightspaceUI/loading-spinner/tree/sass).
 
 # d2l-loading-spinner
 
@@ -9,7 +9,7 @@ A [Polymer](https://www.polymer-project.org/1.0/)-based web component loading sp
 
 ![screenshot of loading component](/loading-spinner.gif?raw=true)
 
-For further information on this and other D2L UI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
+For further information on this and other D2L UI components, see the docs at [ui.valence.d2l.com](http://ui.developers.brightspace.com/).
 
 ## Installation
 
@@ -83,5 +83,5 @@ See the [Best Practices & Style Guide](https://github.com/Brightspace/valence-ui
 
 [bower-url]: http://bower.io/search/?q=d2l-loading-spinner
 [bower-image]: https://img.shields.io/bower/v/d2l-loading-spinner.svg
-[ci-url]: https://travis-ci.org/Brightspace/d2l-loading-spinner-ui
-[ci-image]: https://travis-ci.org/Brightspace/d2l-loading-spinner-ui.svg?branch=master
+[ci-url]: https://travis-ci.org/BrightspaceUI/loading-spinner
+[ci-image]: https://travis-ci.org/BrightspaceUI/loading-spinner.svg?branch=master
