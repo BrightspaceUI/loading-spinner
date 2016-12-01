@@ -3,7 +3,7 @@
   "main": "d2l-loading-spinner.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/d2l-loading-spinner-ui.git"
+    "url": "https://github.com/BrightspaceUI/loading-spinner.git"
   },
   "authors": [
     "D2L Corporation"
