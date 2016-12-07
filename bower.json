@@ -21,5 +21,8 @@
     "iron-icon": "^1.0.0",
     "iron-iconset-svg": "^1.0.0",
     "polymer": "^1.7.0"
+  },
+  "devDependencies": {
+    "d2l-demo-template": "~0.0.8"
   }
 }
