@@ -1,5 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../d2l-icons/d2l-icon.html">
 <link rel="import" href="../d2l-colors/d2l-colors.html">
 <link rel="import" href="./icons.html">
 
@@ -17,17 +17,21 @@
 
 			:host .d2l-loading-spinner-bg {
 				position: absolute;
-				--iron-icon-width: 100%;
-				--iron-icon-height: 100%;
-				--iron-icon-stroke-color: currentcolor;
+				--d2l-icon-width: 100%;
+				--d2l-icon-height: 100%;
+				--d2l-icon-stroke-color: var(--d2l-loading-spinner-color, --d2l-color-celestine);
 				top: 0;
 				transform-origin: left bottom;
 			}
 
-			:host .d2l-loading-spinner-slice1,:host .d2l-loading-spinner-slice2,:host .d2l-loading-spinner-slice3,:host .d2l-loading-spinner-slice4,:host .d2l-loading-spinner-slice5 {
+			:host .d2l-loading-spinner-slice1,
+			:host .d2l-loading-spinner-slice2,
+			:host .d2l-loading-spinner-slice3,
+			:host .d2l-loading-spinner-slice4,
+			:host .d2l-loading-spinner-slice5 {
 				position: absolute;
-				--iron-icon-width: 50%;
-				--iron-icon-height: 50%;
+				--d2l-icon-width: 50%;
+				--d2l-icon-height: 50%;
 				top: 0;
 				left: 50%;
 
@@ -123,12 +127,12 @@
 			}
 
 		</style>
-		<iron-icon class="d2l-loading-spinner-bg" icon="d2l-loading-spinner:bg"></iron-icon>
-		<iron-icon class="d2l-loading-spinner-slice1" icon="d2l-loading-spinner:slice"></iron-icon>
-		<iron-icon class="d2l-loading-spinner-slice2" icon="d2l-loading-spinner:slice"></iron-icon>
-		<iron-icon class="d2l-loading-spinner-slice3" icon="d2l-loading-spinner:slice"></iron-icon>
-		<iron-icon class="d2l-loading-spinner-slice4" icon="d2l-loading-spinner:slice"></iron-icon>
-		<iron-icon class="d2l-loading-spinner-slice5" icon="d2l-loading-spinner:slice"></iron-icon>
+		<d2l-icon class="d2l-loading-spinner-bg" icon="d2l-loading-spinner:bg"></d2l-icon>
+		<d2l-icon class="d2l-loading-spinner-slice1" icon="d2l-loading-spinner:slice"></d2l-icon>
+		<d2l-icon class="d2l-loading-spinner-slice2" icon="d2l-loading-spinner:slice"></d2l-icon>
+		<d2l-icon class="d2l-loading-spinner-slice3" icon="d2l-loading-spinner:slice"></d2l-icon>
+		<d2l-icon class="d2l-loading-spinner-slice4" icon="d2l-loading-spinner:slice"></d2l-icon>
+		<d2l-icon class="d2l-loading-spinner-slice5" icon="d2l-loading-spinner:slice"></d2l-icon>
 	</template>
 	<script>
 	Polymer({

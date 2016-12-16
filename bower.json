@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "d2l-colors": "^2.2.3",
-    "iron-icon": "^1.0.0",
+    "d2l-icons": "^2.16.1",
     "iron-iconset-svg": "^1.0.0",
     "polymer": "^1.7.0"
   },
