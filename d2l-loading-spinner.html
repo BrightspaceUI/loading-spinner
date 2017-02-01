@@ -1,7 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../d2l-icons/d2l-icon.html">
 <link rel="import" href="../d2l-colors/d2l-colors.html">
-<link rel="import" href="./icons.html">
 
 <dom-module id="d2l-loading-spinner">
 	<template>
@@ -16,12 +14,11 @@
 			}
 
 			:host .d2l-loading-spinner-bg {
+				height: 100%;
 				position: absolute;
-				--d2l-icon-width: 100%;
-				--d2l-icon-height: 100%;
-				--d2l-icon-stroke-color: var(--d2l-loading-spinner-color, --d2l-color-celestine);
+				stroke: var(--d2l-loading-spinner-color, --d2l-color-celestine);
 				top: 0;
-				transform-origin: left bottom;
+				width: 100%;
 			}
 
 			:host .d2l-loading-spinner-slice1,
@@ -29,51 +26,50 @@
 			:host .d2l-loading-spinner-slice3,
 			:host .d2l-loading-spinner-slice4,
 			:host .d2l-loading-spinner-slice5 {
-				position: absolute;
-				--d2l-icon-width: 50%;
-				--d2l-icon-height: 50%;
-				top: 0;
-				left: 50%;
-
-				-webkit-transform-origin: left bottom;
-				-webkit-animation-timing-function: cubic-bezier(.5,0,.5,1);
-				-webkit-animation-iteration-count: infinite;
 				-webkit-animation-duration: 1.5s;
-				transform-origin: left bottom;
-				animation-timing-function: cubic-bezier(.5,0,.5,1);
-				animation-iteration-count: infinite;
 				animation-duration: 1.5s;
+				-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+				-webkit-animation-timing-function: cubic-bezier(.5,0,.5,1);
+				animation-timing-function: cubic-bezier(.5,0,.5,1);
+				height: 50%;
+				position: absolute;
+				top: 0;
+				-webkit-transform-origin: left bottom;
+				transform-origin: left bottom;
+				left: 50%;
+				width: 50%;
 			}
 
-			:host .d2l-loading-spinner-slice1{
-				-webkit-transform: rotate(54deg);
+			:host .d2l-loading-spinner-slice1 {
 				-webkit-animation-name: slicespin1;
-				transform: rotate(54deg);
 				animation-name: slicespin1;
+				-webkit-transform: rotate(54deg);
+				transform: rotate(54deg);
 			}
-			:host .d2l-loading-spinner-slice2{
-				-webkit-transform: rotate(124deg);
+			:host .d2l-loading-spinner-slice2 {
 				-webkit-animation-name: slicespin2;
-				transform: rotate(124deg);
 				animation-name: slicespin2;
+				-webkit-transform: rotate(124deg);
+				transform: rotate(124deg);
 			}
-			:host .d2l-loading-spinner-slice3{
-				-webkit-transform: rotate(198deg);
+			:host .d2l-loading-spinner-slice3 {
 				-webkit-animation-name: slicespin3;
-				transform: rotate(198deg);
 				animation-name: slicespin3;
+				-webkit-transform: rotate(198deg);
+				transform: rotate(198deg);
 			}
-			:host .d2l-loading-spinner-slice4{
-				-webkit-transform: rotate(270deg);
+			:host .d2l-loading-spinner-slice4 {
+				animation-name: slicespin4;
 				-webkit-animation-name: slicespin4;
 				transform: rotate(270deg);
-				animation-name: slicespin4;
+				-webkit-transform: rotate(270deg);
 			}
-			:host .d2l-loading-spinner-slice5{
-				-webkit-transform: rotate(344deg);
+			:host .d2l-loading-spinner-slice5 {
+				animation-name: slicespin5;
 				-webkit-animation-name: slicespin5;
 				transform: rotate(344deg);
-				animation-name: slicespin5;
+				-webkit-transform: rotate(344deg);
 			}
 
 			@-webkit-keyframes slicespin1 {
@@ -127,12 +123,51 @@
 			}
 
 		</style>
-		<d2l-icon class="d2l-loading-spinner-bg" icon="d2l-loading-spinner:bg"></d2l-icon>
-		<d2l-icon class="d2l-loading-spinner-slice1" icon="d2l-loading-spinner:slice"></d2l-icon>
-		<d2l-icon class="d2l-loading-spinner-slice2" icon="d2l-loading-spinner:slice"></d2l-icon>
-		<d2l-icon class="d2l-loading-spinner-slice3" icon="d2l-loading-spinner:slice"></d2l-icon>
-		<d2l-icon class="d2l-loading-spinner-slice4" icon="d2l-loading-spinner:slice"></d2l-icon>
-		<d2l-icon class="d2l-loading-spinner-slice5" icon="d2l-loading-spinner:slice"></d2l-icon>
+		<svg viewBox="0 0 42 42" class="d2l-loading-spinner-bg">
+			<g fill="none" fill-rule="evenodd" transform="translate(5 5)">
+				<filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="shadow">
+					<feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+					<feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+					<feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.07 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+					<feMerge>
+						<feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+						<feMergeNode in="SourceGraphic"></feMergeNode>
+					</feMerge>
+				</filter>
+				<circle stroke="none" fill="#FFF" cx="16" cy="16" r="16" filter="url(#shadow)"/>
+				<circle stroke-width="2" cx="16" cy="16" r="11"/>
+			</g>
+		</svg>
+		<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice1">
+			<g fill="none" fill-rule="evenodd">
+				<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
+				<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+			</g>
+		</svg>
+		<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice2">
+			<g fill="none" fill-rule="evenodd">
+				<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
+				<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+			</g>
+		</svg>
+		<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice3">
+			<g fill="none" fill-rule="evenodd">
+				<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
+				<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+			</g>
+		</svg>
+		<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice4">
+			<g fill="none" fill-rule="evenodd">
+				<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
+				<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+			</g>
+		</svg>
+		<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice5">
+			<g fill="none" fill-rule="evenodd">
+				<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
+				<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+			</g>
+		</svg>
 	</template>
 	<script>
 	Polymer({
@@ -149,9 +184,11 @@
 		},
 		_colorChanged: function(newColor) {
 			this.customStyle['--d2l-loading-spinner-color'] = newColor;
+			this.updateStyles();
 		},
 		_sizeChanged: function(newSize) {
 			this.customStyle['--d2l-loading-spinner-size'] = newSize + 'px';
+			this.updateStyles();
 		}
 	});
 	</script>
