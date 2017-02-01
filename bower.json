@@ -18,8 +18,6 @@
   ],
   "dependencies": {
     "d2l-colors": "^2.2.3",
-    "d2l-icons": "^3.0.0",
-    "iron-iconset-svg": "^1.1.0",
     "polymer": "^1.7.1"
   },
   "devDependencies": {
