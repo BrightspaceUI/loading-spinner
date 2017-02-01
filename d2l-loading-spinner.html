@@ -26,55 +26,36 @@
 			:host .d2l-loading-spinner-slice3,
 			:host .d2l-loading-spinner-slice4,
 			:host .d2l-loading-spinner-slice5 {
-				-webkit-animation-duration: 1.5s;
 				animation-duration: 1.5s;
-				-webkit-animation-iteration-count: infinite;
 				animation-iteration-count: infinite;
-				-webkit-animation-timing-function: cubic-bezier(.5,0,.5,1);
 				animation-timing-function: cubic-bezier(.5,0,.5,1);
 				height: 50%;
 				position: absolute;
 				top: 0;
-				-webkit-transform-origin: left bottom;
 				transform-origin: left bottom;
 				left: 50%;
 				width: 50%;
 			}
 
 			:host .d2l-loading-spinner-slice1 {
-				-webkit-animation-name: slicespin1;
 				animation-name: slicespin1;
-				-webkit-transform: rotate(54deg);
 				transform: rotate(54deg);
 			}
 			:host .d2l-loading-spinner-slice2 {
-				-webkit-animation-name: slicespin2;
 				animation-name: slicespin2;
-				-webkit-transform: rotate(124deg);
 				transform: rotate(124deg);
 			}
 			:host .d2l-loading-spinner-slice3 {
-				-webkit-animation-name: slicespin3;
 				animation-name: slicespin3;
-				-webkit-transform: rotate(198deg);
 				transform: rotate(198deg);
 			}
 			:host .d2l-loading-spinner-slice4 {
-				-webkit-animation-name: slicespin4;
 				animation-name: slicespin4;
-				-webkit-transform: rotate(270deg);
 				transform: rotate(270deg);
 			}
 			:host .d2l-loading-spinner-slice5 {
-				-webkit-animation-name: slicespin5;
 				animation-name: slicespin5;
-				-webkit-transform: rotate(344deg);
 				transform: rotate(344deg);
-			}
-
-			@-webkit-keyframes slicespin1 {
-				0% { -webkit-transform: rotate(54deg); }
-				80%, 100% { -webkit-transform: rotate(430deg); }
 			}
 
 			@keyframes slicespin1 {
@@ -82,19 +63,9 @@
 				80%, 100% { transform: rotate(430deg); }
 			}
 
-			@-webkit-keyframes slicespin2 {
-				0%, 10% { -webkit-transform: rotate(124deg); }
-				80%, 100% { -webkit-transform: rotate(500deg); }
-			}
-
 			@keyframes slicespin2 {
 				0%, 10% { transform: rotate(124deg); }
 				80%, 100% { transform: rotate(500deg); }
-			}
-
-			@-webkit-keyframes slicespin3 {
-				0%, 20% { -webkit-transform: rotate(198deg); }
-				80%, 100% { -webkit-transform: rotate(574deg); }
 			}
 
 			@keyframes slicespin3 {
@@ -102,19 +73,9 @@
 				80%, 100% { transform: rotate(574deg); }
 			}
 
-			@-webkit-keyframes slicespin4 {
-				0%, 35%{ -webkit-transform: rotate(270deg); }
-				80%, 100% { -webkit-transform: rotate(644deg); }
-			}
-
 			@keyframes slicespin4 {
 				0%, 35%{ transform: rotate(270deg); }
 				80%, 100% { transform: rotate(644deg); }
-			}
-
-			@-webkit-keyframes slicespin5 {
-				0%, 60%, { -webkit-transform: rotate(344deg); }
-				80%, 100% { -webkit-transform: rotate(720deg); }
 			}
 
 			@keyframes slicespin5 {
