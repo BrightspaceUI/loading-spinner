@@ -21,9 +21,9 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "bower": "^1.7.9",
-    "eslint": "^3.7.1",
+    "eslint": "^3.14.1",
     "eslint-config-brightspace": "^0.2.4",
-    "eslint-plugin-html": "^1.5.3",
-    "polymer-cli": "^0.16.0"
+    "eslint-plugin-html": "^2.0.0",
+    "polymer-cli": "^0.17.0"
   }
 }

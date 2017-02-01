@@ -19,10 +19,11 @@
   "dependencies": {
     "d2l-colors": "^2.2.3",
     "d2l-icons": "^3.0.0",
-    "iron-iconset-svg": "^1.0.0",
-    "polymer": "^1.7.0"
+    "iron-iconset-svg": "^1.1.0",
+    "polymer": "^1.7.1"
   },
   "devDependencies": {
-    "d2l-demo-template": "~0.0.8"
+    "d2l-demo-template": "^0.0.11",
+    "webcomponentsjs": "webcomponents.js#^0.7.23"
   }
 }
