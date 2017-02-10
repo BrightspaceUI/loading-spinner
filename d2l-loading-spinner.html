@@ -17,17 +17,18 @@
 				width: var(--d2l-loading-spinner-size, 50px);
 			}
 
+			:host .d2l-loading-spinner-bg,
 			:host .d2l-loading-spinner-blur {
-				opacity: 0.1;
-				filter: blur(calc(var(--d2l-loading-spinner-size, 50px) / 10));
-			}
-
-			:host .d2l-loading-spinner-bg {
 				height: 100%;
 				position: absolute;
 				stroke: var(--d2l-loading-spinner-color, --d2l-color-celestine);
 				top: 0;
 				width: 100%;
+			}
+
+			:host .d2l-loading-spinner-blur {
+				opacity: 0.1;
+				filter: blur(calc(var(--d2l-loading-spinner-size, 50px) / 10));
 			}
 
 			:host .d2l-loading-spinner-slice1,
