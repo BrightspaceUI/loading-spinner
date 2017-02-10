@@ -17,12 +17,22 @@
 				width: var(--d2l-loading-spinner-size, 50px);
 			}
 
-			:host .d2l-loading-spinner-bg {
+			:host .d2l-loading-spinner-bg,
+		   	:host .d2l-loading-spinner-bg-blur {
 				height: 100%;
 				position: absolute;
-				stroke: var(--d2l-loading-spinner-color, --d2l-color-celestine);
 				top: 0;
 				width: 100%;
+				stroke: var(--d2l-loading-spinner-color, --d2l-color-celestine);
+			}
+
+			:host .d2l-loading-spinner-bg-stroke {
+				stroke: #ededfa;
+			}
+
+			:host .d2l-loading-spinner-bg-blur {
+				opacity: 0.1;
+				filter: blur(calc(var(--d2l-loading-spinner-size, 50px) / 10));
 			}
 
 			:host .d2l-loading-spinner-slice1,
@@ -89,18 +99,15 @@
 
 		</style>
 		<div class="d2l-loading-spinner-wrapper">
+			<svg viewBox="0 0 42 42" class="d2l-loading-spinner-bg-blur" focusable="false">
+				<g fill="none" fill-rule="evenodd" transform="translate(5 5)">
+					<circle stroke="none" fill="#000" cx="16" cy="16" r="14"/>
+				</g>
+			</svg>
 			<svg viewBox="0 0 42 42" class="d2l-loading-spinner-bg" focusable="false">
 				<g fill="none" fill-rule="evenodd" transform="translate(5 5)">
-					<filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="shadow">
-						<feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-						<feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-						<feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.07 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
-						<feMerge>
-							<feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-							<feMergeNode in="SourceGraphic"></feMergeNode>
-						</feMerge>
-					</filter>
-					<circle stroke="none" fill="#FFF" cx="16" cy="16" r="16" filter="url(#shadow)"/>
+					<circle stroke-width="0.5" cx="16" cy="16" r="16" class="d2l-loading-spinner-bg-stroke"/>
+					<circle stroke="none" fill="#FFF" cx="16" cy="16" r="16"/>
 					<circle stroke-width="2" cx="16" cy="16" r="11"/>
 				</g>
 			</svg>
