@@ -1,11 +1,16 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../d2l-colors/d2l-colors.html">
+<!--
+`<d2l-loading-spinner>` is a simple infinite loading indicator.
 
+@demo demo/index.html
+@element d2l-loading-spinner
+-->
 <dom-module id="d2l-loading-spinner">
-	<template>
+	<template strip-whitespace>
 		<style>
 			:host {
-				color: var(--d2l-loading-spinner-color, --d2l-color-celestine);
+				color: var(--d2l-loading-spinner-color, var(--d2l-color-celestine));
 				display: inline-block;
 				text-align: initial;
 			}
@@ -19,12 +24,12 @@
 			}
 
 			:host .d2l-loading-spinner-bg,
-		   	:host .d2l-loading-spinner-bg-blur {
+			:host .d2l-loading-spinner-bg-blur {
 				height: 100%;
 				position: absolute;
 				top: 0;
 				width: 100%;
-				stroke: var(--d2l-loading-spinner-color, --d2l-color-celestine);
+				stroke: var(--d2l-loading-spinner-color, var(--d2l-color-celestine));
 			}
 
 			:host .d2l-loading-spinner-bg-stroke {
@@ -148,22 +153,26 @@
 	Polymer({
 		is: 'd2l-loading-spinner',
 		properties: {
+			/**
+			 * While not recommended, the default color (blue) can be overidden using the `color` attribute.
+			 */
 			color: {
 				observer: '_colorChanged',
 				type: String
 			},
+			/**
+			 * Adjusts the size of the spinner, default is `50`.
+			 */
 			size: {
 				observer: '_sizeChanged',
 				type: Number
 			}
 		},
 		_colorChanged: function(newColor) {
-			this.customStyle['--d2l-loading-spinner-color'] = newColor;
-			this.updateStyles();
+			this.updateStyles({'--d2l-loading-spinner-color': newColor});
 		},
 		_sizeChanged: function(newSize) {
-			this.customStyle['--d2l-loading-spinner-size'] = newSize + 'px';
-			this.updateStyles();
+			this.updateStyles({'--d2l-loading-spinner-size': newSize + 'px'});
 		}
 	});
 	</script>

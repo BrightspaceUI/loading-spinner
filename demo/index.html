@@ -1,10 +1,20 @@
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
-		<title>d2l-loading-spinner</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
-		<link rel="import" href="../../d2l-demo-template/d2l-demo-template.html">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+		<title>d2l-loading-spinner demo</title>
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<link rel="import" href="../../d2l-typography/d2l-typography.html">
+		<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+		<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
 		<link rel="import" href="../d2l-loading-spinner.html">
+		<custom-style>
+			<style is="custom-style" include="demo-pages-shared-styles"></style>
+		</custom-style>
+		<custom-style include="d2l-typography">
+			<style is="custom-style" include="d2l-typography"></style>
+		</custom-style>
 		<custom-style>
 			<style is="custom-style">
 				.big {
@@ -20,31 +30,62 @@
 				}
 			</style>
 		</custom-style>
+		<style>
+		html {
+			font-size: 20px;
+		}
+		</style>
 	</head>
-	<body unresolved>
+	<body unresolved class="d2l-typography">
+		<div class="vertical-section-container centered">
+			<h3>Default (50px)</h3>
+			<demo-snippet>
+				<template>
+					<d2l-loading-spinner></d2l-loading-spinner>
+				</template>
+			</demo-snippet>
 
-		<d2l-demo-template title="d2l-loading-spinner">
+			<h3>Small (30px, attribute)</h3>
+			<demo-snippet>
+				<template>
+					<d2l-loading-spinner size="30"></d2l-loading-spinner>
+				</template>
+			</demo-snippet>
 
-			<div class="d2l-demo-fixture">
-				<p>Small (30px)</p>
-				<d2l-loading-spinner size="30"></d2l-loading-spinner>
-				<p>Default (50px)</p>
-				<d2l-loading-spinner></d2l-loading-spinner>
-				<p>Big (100px, attribute)</p>
-				<d2l-loading-spinner size="100"></d2l-loading-spinner>
-				<p>Big (100px, CSS variable)</p>
-				<d2l-loading-spinner class="big"></d2l-loading-spinner>
-				<p>Bigger (200px)</p>
-				<d2l-loading-spinner size="200"></d2l-loading-spinner>
-				<p>Red (attribute)</p>
-				<d2l-loading-spinner color="red" size="200"></d2l-loading-spinner>
-				<p>Red (CSS variable)</p>
-				<d2l-loading-spinner class="red" size="200"></d2l-loading-spinner>
-				<p>Padding &amp; Centered</p>
-				<d2l-loading-spinner class="padding" size="100"></d2l-loading-spinner>
-			</div>
+			<h3>Big (100px, attribute)</h3>
+			<demo-snippet>
+				<template>
+					<d2l-loading-spinner size="100"></d2l-loading-spinner>
+				</template>
+			</demo-snippet>
 
-		</d2l-demo-template>
+			<h3>Big (100px, CSS variable)</h3>
+			<demo-snippet>
+				<template>
+					<d2l-loading-spinner class="big"></d2l-loading-spinner>
+				</template>
+			</demo-snippet>
 
+			<h3>Red (attribute)</h3>
+			<demo-snippet>
+				<template>
+					<d2l-loading-spinner color="red"></d2l-loading-spinner>
+				</template>
+			</demo-snippet>
+
+			<h3>Red (CSS variable)</h3>
+			<demo-snippet>
+				<template>
+					<d2l-loading-spinner class="red"></d2l-loading-spinner>
+				</template>
+			</demo-snippet>
+
+			<h3>Padding &amp; Centered</h3>
+			<demo-snippet>
+				<template>
+					<d2l-loading-spinner class="padding"></d2l-loading-spinner>
+				</template>
+			</demo-snippet>
+		</div>
 	</body>
 </html>

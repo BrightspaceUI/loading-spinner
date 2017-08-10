@@ -1,15 +1,15 @@
 **Looking for SASS-based `d2l-loading-spinner`?** It's [over here](https://github.com/BrightspaceUI/loading-spinner/tree/sass).
 
 # d2l-loading-spinner
-
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/BrightspaceUI/link)
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
-A [Polymer](https://www.polymer-project.org/1.0/)-based web component loading spinner.
+[Polymer](https://www.polymer-project.org)-based web component loading spinner.
 
 ![screenshot of loading component](/loading-spinner.gif?raw=true)
 
-For further information on this and other D2L UI components, see the docs at [ui.valence.d2l.com](http://ui.developers.brightspace.com/).
+For further information on this and other Brightspace UI components, see the docs at [ui.developers.brightspace.com](http://ui.developers.brightspace.com/).
 
 ## Installation
 
@@ -24,8 +24,8 @@ Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyf
 
 ```html
 <head>
-	<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
-	<link rel="import" href="../d2l-loading-spinner/d2l-loading-spinner.html">
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	<link rel="import" href="bower_components/d2l-loading-spinner/d2l-loading-spinner.html">
 </head>
 ```
 
@@ -43,14 +43,14 @@ The size (default `50px`) can be adjusted using the `size` attribute:
 <d2l-loading-spinner size="100"></d2l-loading-spinner>
 ```
 
-Or by setting the `--d2l-loading-spinner-size` [CSS property](https://www.polymer-project.org/1.0/docs/devguide/styling#custom-css-properties):
+Or by setting the `--d2l-loading-spinner-size` [CSS property](https://www.polymer-project.org/2.0/docs/devguide/custom-css-properties):
 
 ```html
-<style is="custom-style">
+<custom-style>
 .huge-spinner {
 	--d2l-loading-spinner-size: 400px;
 }
-</style>
+</custom-style>
 <d2l-loading-spinner class="huge-spinner"></d2l-loading-spinner>
 ```
 
@@ -62,26 +62,40 @@ While not recommended, the default color (blue) can be set using the `color` att
 <d2l-loading-spinner color="red"></d2l-loading-spinner>
 ```
 
-Or by setting the `--d2l-loading-spinner-color` [CSS property](https://www.polymer-project.org/1.0/docs/devguide/styling#custom-css-properties):
+Or by setting the `--d2l-loading-spinner-color` [CSS property](https://www.polymer-project.org/2.0/docs/devguide/custom-css-properties):
 
 ```html
-<style is="custom-style">
+<custom-style>
 .red-spinner {
 	--d2l-loading-spinner-color: red;
 }
-</style>
+</custom-style>
 <d2l-loading-spinner class="red-spinner"></d2l-loading-spinner>
 ```
 
-### Usage in Production
+## Developing, Testing and Contributing
 
-In production, it's recommended to use a build tool like [Vulcanize](https://github.com/Polymer/vulcanize) to combine all your web components into a single import file. [More from the Polymer Docs: Optimize for Production](https://www.polymer-project.org/1.0/tools/optimize-for-production.html)...
+After cloning the repo, run `npm install` to install dependencies.
 
-## Coding styles
+If you don't have it already, install the [Polymer CLI](https://www.polymer-project.org/2.0/docs/tools/polymer-cli) globally:
 
-See the [Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
+```shell
+npm install -g polymer-cli
+```
+
+To start a [local web server](https://www.polymer-project.org/2.0/docs/tools/polymer-cli-commands#serve) that hosts the demo page and tests:
+
+```shell
+polymer serve
+```
+
+To lint ([eslint](http://eslint.org/) and [Polymer lint](https://www.polymer-project.org/2.0/docs/tools/polymer-cli-commands#lint)):
+
+```shell
+npm run lint
+```
 
 [bower-url]: http://bower.io/search/?q=d2l-loading-spinner
-[bower-image]: https://img.shields.io/bower/v/d2l-loading-spinner.svg
+[bower-image]: https://badge.fury.io/bo/d2l-loading-spinner.svg
 [ci-url]: https://travis-ci.org/BrightspaceUI/loading-spinner
 [ci-image]: https://travis-ci.org/BrightspaceUI/loading-spinner.svg?branch=master
