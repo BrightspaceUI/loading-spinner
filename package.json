@@ -5,8 +5,8 @@
   "scripts": {
     "postinstall": "polymer install --variants",
     "test": "npm run lint",
-    "lint": "npm run lint:js && npm run lint:wc",
-    "lint:js": "eslint *.html",
+    "lint": "npm run lint:html && npm run lint:wc",
+    "lint:html": "eslint *.html demo/*.html",
     "lint:wc": "polymer lint -i *.html"
   },
   "repository": {
