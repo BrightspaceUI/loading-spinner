@@ -1,7 +1,7 @@
 **Looking for SASS-based `d2l-loading-spinner`?** It's [over here](https://github.com/BrightspaceUI/loading-spinner/tree/sass).
 
 # d2l-loading-spinner
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/BrightspaceUI/link)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/BrightspaceUI/loading-spinner)
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
