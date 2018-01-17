@@ -24,13 +24,22 @@ Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyf
 
 ```html
 <head>
-	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-	<link rel="import" href="bower_components/d2l-loading-spinner/d2l-loading-spinner.html">
+  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../d2l-loading-spinner/d2l-loading-spinner.html">
 </head>
 ```
 
-The component can now be used as shown below:
-
+<!---
+```
+<custom-element-demo>
+  <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="d2l-loading-spinner.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
 ```html
 <d2l-loading-spinner></d2l-loading-spinner>
 ```
@@ -48,7 +57,7 @@ Or by setting the `--d2l-loading-spinner-size` [CSS property](https://www.polyme
 ```html
 <custom-style>
 .huge-spinner {
-	--d2l-loading-spinner-size: 400px;
+  --d2l-loading-spinner-size: 400px;
 }
 </custom-style>
 <d2l-loading-spinner class="huge-spinner"></d2l-loading-spinner>
@@ -67,7 +76,7 @@ Or by setting the `--d2l-loading-spinner-color` [CSS property](https://www.polym
 ```html
 <custom-style>
 .red-spinner {
-	--d2l-loading-spinner-color: red;
+  --d2l-loading-spinner-color: red;
 }
 </custom-style>
 <d2l-loading-spinner class="red-spinner"></d2l-loading-spinner>
