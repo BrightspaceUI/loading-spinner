@@ -14,6 +14,10 @@
 				display: inline-block;
 				text-align: initial;
 			}
+			/* required since display of inline-block is non-default */
+			:host([hidden]) {
+				display: none;
+			}
 
 			:host .d2l-loading-spinner-wrapper {
 				height: var(--d2l-loading-spinner-size, 50px);
