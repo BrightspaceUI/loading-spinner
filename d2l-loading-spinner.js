@@ -1,13 +1,22 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../d2l-colors/d2l-colors.html">
-<!--
+/**
 `<d2l-loading-spinner>` is a simple infinite loading indicator.
 
 @demo demo/index.html
 @element d2l-loading-spinner
--->
-<dom-module id="d2l-loading-spinner">
-	<template strip-whitespace>
+*/
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+import '../@polymer/polymer/polymer-legacy.js';
+
+import '../d2l-colors/d2l-colors.js';
+import { Polymer } from '../@polymer/polymer/lib/legacy/polymer-fn.js';
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<dom-module id="d2l-loading-spinner">
+	<template strip-whitespace="">
 		<style>
 			:host {
 				color: var(--d2l-loading-spinner-color, var(--d2l-color-celestine));
@@ -111,73 +120,74 @@
 		<div class="d2l-loading-spinner-wrapper">
 			<svg viewBox="0 0 42 42" class="d2l-loading-spinner-bg-blur" focusable="false">
 				<g fill="none" fill-rule="evenodd" transform="translate(5 5)">
-					<circle stroke="none" fill="#000" cx="16" cy="16" r="14"/>
+					<circle stroke="none" fill="#000" cx="16" cy="16" r="14"></circle>
 				</g>
 			</svg>
 			<svg viewBox="0 0 42 42" class="d2l-loading-spinner-bg" focusable="false">
 				<g fill="none" fill-rule="evenodd" transform="translate(5 5)">
-					<circle stroke-width="0.5" cx="16" cy="16" r="16" class="d2l-loading-spinner-bg-stroke"/>
-					<circle stroke="none" fill="#FFF" cx="16" cy="16" r="16"/>
-					<circle stroke-width="2" cx="16" cy="16" r="11"/>
+					<circle stroke-width="0.5" cx="16" cy="16" r="16" class="d2l-loading-spinner-bg-stroke"></circle>
+					<circle stroke="none" fill="#FFF" cx="16" cy="16" r="16"></circle>
+					<circle stroke-width="2" cx="16" cy="16" r="11"></circle>
 				</g>
 			</svg>
 			<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice1" focusable="false">
 				<g fill="none" fill-rule="evenodd">
-					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
-					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"></path>
+					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"></path>
 				</g>
 			</svg>
 			<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice2" focusable="false">
 				<g fill="none" fill-rule="evenodd">
-					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
-					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"></path>
+					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"></path>
 				</g>
 			</svg>
 			<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice3" focusable="false">
 				<g fill="none" fill-rule="evenodd">
-					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
-					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"></path>
+					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"></path>
 				</g>
 			</svg>
 			<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice4" focusable="false">
 				<g fill="none" fill-rule="evenodd">
-					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
-					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"></path>
+					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"></path>
 				</g>
 			</svg>
 			<svg viewBox="0 0 42 42" class="d2l-loading-spinner-slice5" focusable="false">
 				<g fill="none" fill-rule="evenodd">
-					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"/>
-					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"/>
+					<path d="M24 42h8c0-17.673-14.327-32-32-32v8c1.105 0 2 .895 2 2s-.895 2-2 2v20h20c0-1.105.895-2 2-2s2 .895 2 2z" fill="#FFF"></path>
+					<path d="M0 22c1.105 0 2-.895 2-2s-.895-2-2-2c13.255 0 24 10.745 24 24 0-1.105-.895-2-2-2s-2 .895-2 2c0-11.046-8.954-20-20-20z" fill="#E6EAF0"></path>
 				</g>
 			</svg>
 		</div>
 	</template>
-	<script>
-	Polymer({
-		is: 'd2l-loading-spinner',
-		properties: {
-			/**
-			 * While not recommended, the default color (blue) can be overidden using the `color` attribute.
-			 */
-			color: {
-				observer: '_colorChanged',
-				type: String
-			},
-			/**
-			 * Adjusts the size of the spinner, default is `50`.
-			 */
-			size: {
-				observer: '_sizeChanged',
-				type: Number
-			}
+	
+</dom-module>`;
+
+document.head.appendChild($_documentContainer.content);
+Polymer({
+	is: 'd2l-loading-spinner',
+	properties: {
+		/**
+		 * While not recommended, the default color (blue) can be overidden using the `color` attribute.
+		 */
+		color: {
+			observer: '_colorChanged',
+			type: String
 		},
-		_colorChanged: function(newColor) {
-			this.updateStyles({'--d2l-loading-spinner-color': newColor});
-		},
-		_sizeChanged: function(newSize) {
-			this.updateStyles({'--d2l-loading-spinner-size': newSize + 'px'});
+		/**
+		 * Adjusts the size of the spinner, default is `50`.
+		 */
+		size: {
+			observer: '_sizeChanged',
+			type: Number
 		}
-	});
-	</script>
-</dom-module>
+	},
+	_colorChanged: function(newColor) {
+		this.updateStyles({'--d2l-loading-spinner-color': newColor});
+	},
+	_sizeChanged: function(newSize) {
+		this.updateStyles({'--d2l-loading-spinner-size': newSize + 'px'});
+	}
+});
