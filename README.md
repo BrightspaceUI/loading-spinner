@@ -9,7 +9,7 @@
 
 ![screenshot of loading component](/loading-spinner.gif?raw=true)
 
-For further information on this and other Brightspace UI components, see the docs at [ui.developers.brightspace.com](http://ui.developers.brightspace.com/).
+For further information on this and other components, refer to [The Brightspace UI Guide](https://github.com/BrightspaceUI/guide/wiki).
 
 ## Installation
 
