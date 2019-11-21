@@ -3,42 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-		<title>d2l-loading-spinner demo</title>
-		<script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-		<script type="module" src="../../d2l-typography/d2l-typography.js"></script>
-		<script type="module" src="../../@polymer/iron-demo-helpers/demo-pages-shared-styles.js"></script>
-		<script type="module" src="../../@polymer/iron-demo-helpers/demo-snippet.js"></script>
-		<script type="module" src="../d2l-loading-spinner.js"></script>
-		<!-- FIXME(polymer-modulizer):
-		These imperative modules that innerHTML your HTML are
-		a hacky way to be sure that any mixins in included style
-		modules are ready before any elements that reference them are
-		instantiated, otherwise the CSS @apply mixin polyfill won't be
-		able to expand the underlying CSS custom properties.
-		See: https://github.com/Polymer/polymer-modulizer/issues/154
-		-->
-	<script type="module">
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<custom-style>
-			<style is="custom-style" include="demo-pages-shared-styles"></style>
-		</custom-style>`;
-
-document.body.appendChild($_documentContainer.content);
-</script>
+		<link rel="stylesheet" href="/node_modules/@brightspace-ui/core/components/demo/styles.css" type="text/css">
+		<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 		<script type="module">
-const $_documentContainer = document.createElement('template');
+			import '/node_modules/@polymer/polymer/lib/elements/custom-style.js';
+			import '/node_modules/@brightspace-ui/core/components/demo/demo-page.js';
+			import '../d2l-loading-spinner.js';
+		</script>
+	</head>
+	<body unresolved>
 
-$_documentContainer.innerHTML = `<custom-style include="d2l-typography">
-			<style is="custom-style" include="d2l-typography"></style>
-		</custom-style>`;
-
-document.body.appendChild($_documentContainer.content);
-</script>
-		<script type="module">
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<custom-style>
+		<custom-style>
 			<style is="custom-style">
 				.big {
 					--d2l-loading-spinner-size: 100px;
@@ -46,84 +21,56 @@ $_documentContainer.innerHTML = `<custom-style>
 				.red {
 					--d2l-loading-spinner-color: red;
 				}
-				.padding {
-					padding-bottom: 30px;
-					display: block;
-					margin: auto;
-				}
 			</style>
-		</custom-style>`;
+		</custom-style>
 
-document.body.appendChild($_documentContainer.content);
-</script>
-		<script type="module">
-const $_documentContainer = document.createElement('template');
+		<d2l-demo-page page-title="d2l-loading-spinner (imported from core)">
 
-$_documentContainer.innerHTML = `<style>
-		html {
-			font-size: 20px;
-		}
-		</style>`;
+			<h2>Default</h2>
 
-document.body.appendChild($_documentContainer.content);
-</script>
-	</head>
-	<body unresolved class="d2l-typography">
-		<script type="module">
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<div class="vertical-section-container centered">
-			<h3>Default (50px)</h3>
-			<demo-snippet>
+			<d2l-demo-snippet>
 				<template>
 					<d2l-loading-spinner></d2l-loading-spinner>
 				</template>
-			</demo-snippet>
+			</d2l-demo-snippet>
 
-			<h3>Small (30px, attribute)</h3>
-			<demo-snippet>
+			<h2>Color Override (attribute)</h2>
+
+			<d2l-demo-snippet>
+				<template>
+					<d2l-loading-spinner color="#cd2026"></d2l-loading-spinner>
+					<d2l-loading-spinner color="var(--d2l-color-cinnabar)"></d2l-loading-spinner>
+				</template>
+			</d2l-demo-snippet>
+
+			<h2>Size Override (attribute)</h2>
+
+			<d2l-demo-snippet>
 				<template>
 					<d2l-loading-spinner size="30"></d2l-loading-spinner>
-				</template>
-			</demo-snippet>
-
-			<h3>Big (100px, attribute)</h3>
-			<demo-snippet>
-				<template>
+					<d2l-loading-spinner size="70"></d2l-loading-spinner>
 					<d2l-loading-spinner size="100"></d2l-loading-spinner>
 				</template>
-			</demo-snippet>
+			</d2l-demo-snippet>
 
-			<h3>Big (100px, CSS variable)</h3>
-			<demo-snippet>
-				<template>
-					<d2l-loading-spinner class="big"></d2l-loading-spinner>
-				</template>
-			</demo-snippet>
+			<h2>Color Override (CSS variable)</h2>
 
-			<h3>Red (attribute)</h3>
-			<demo-snippet>
-				<template>
-					<d2l-loading-spinner color="red"></d2l-loading-spinner>
-				</template>
-			</demo-snippet>
-
-			<h3>Red (CSS variable)</h3>
-			<demo-snippet>
+			<d2l-demo-snippet>
 				<template>
 					<d2l-loading-spinner class="red"></d2l-loading-spinner>
 				</template>
-			</demo-snippet>
+			</d2l-demo-snippet>
 
-			<h3>Padding &amp; Centered</h3>
-			<demo-snippet>
+			<h2>Size Override (CSS variable)</h2>
+
+			<d2l-demo-snippet>
 				<template>
-					<d2l-loading-spinner class="padding"></d2l-loading-spinner>
+					<d2l-loading-spinner class="big"></d2l-loading-spinner>
 				</template>
-			</demo-snippet>
-		</div>`;
+			</d2l-demo-snippet>
 
-document.body.appendChild($_documentContainer.content);
-</script>
+		</d2l-demo-page>
+
+
 	</body>
 </html>

@@ -1,7 +1,7 @@
 language: node_js
 node_js: node
 script:
-- npm run test:lint
+- npm run lint
 after_success:
 - frauci-update-version -d=skip && export TRAVIS_TAG=$(frauci-get-version)
 deploy:

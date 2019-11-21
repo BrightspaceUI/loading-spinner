@@ -11,27 +11,22 @@
   },
   "name": "d2l-loading-spinner",
   "scripts": {
-    "test:lint": "npm run test:lint:wc && npm run test:lint:js",
-    "test:lint:js": "eslint . --ext .js,.html test/**/*.js test/**/*.html demo/**/*.js demo/**/*.html",
-    "test:lint:wc": "polymer lint",
-    "test": "npm run test:lint"
+    "lint": "npm run lint:wc && npm run lint:js",
+    "lint:js": "eslint . --ext .js,.html demo/**/*.html",
+    "lint:wc": "polymer lint --rules polymer-3",
+    "test": "npm run lint"
   },
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@babel/polyfill": "^7.0.0",
-    "@polymer/iron-component-page": "^3.0.0-pre.18",
-    "@polymer/iron-demo-helpers": "^3.0.0-pre.18",
-    "@polymer/iron-test-helpers": "^3.0.0-pre.18",
-    "@webcomponents/webcomponentsjs": "^2.2.1",
-    "babel-eslint": "^10.0.1",
-    "d2l-typography": "BrightspaceUI/typography#semver:^7",
-    "eslint": "^4.15.0",
-    "eslint-config-brightspace": "^0.4.0",
-    "eslint-plugin-html": "^4.0.1",
+    "@webcomponents/webcomponentsjs": "^2",
+    "babel-eslint": "^10",
+    "eslint": "^6",
+    "eslint-config-brightspace": "^0.6.0",
+    "eslint-plugin-html": "^6",
+    "eslint-plugin-sort-class-members": "^1",
     "frau-ci": "^1.33.2",
-    "polymer-cli": "^1.9.1",
-    "wct-browser-legacy": "^1.0.1"
+    "polymer-cli": "^1"
   },
   "version": "7.4.0",
   "resolutions": {
@@ -42,7 +37,7 @@
   },
   "main": "d2l-loading-spinner.js",
   "dependencies": {
-    "d2l-colors": "BrightspaceUI/colors#semver:^4",
+    "@brightspace-ui/core": "^1.17.0",
     "@polymer/polymer": "^3.0.0"
   }
 }
